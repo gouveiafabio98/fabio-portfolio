@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fábio's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico">
+</head>
+
+<body>
+    <div id="menu" class="active" mouse_event="upside" mouse_type="click"><span></span></div>
+    <div id="menuOpen">
+        <ul>
+            <li class="active" mouse_event="" mouse_type="click">
+                <a onclick="indexTransition(0)">About me</a>
+            </li>
+            <li class="active" mouse_event="" mouse_type="click">
+                <a onclick="indexTransition(1)">Projects</a>
+            </li>
+            <li class="active" mouse_event="" mouse_type="click">
+                <a href="https://www.behance.net/gouveiafabio" target="_blank">Behance</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="cursor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 80">
+            <rect x="70" y="30" width="5" height="25" />
+            <rect x="65" y="55" width="5" height="10" />
+            <polygon points="70 25 70 30 65 30 65 35 60 35 60 25 70 25" />
+            <polygon points="65 65 65 80 55 80 55 75 60 75 60 65 65 65" />
+            <rect x="55" y="45" width="5" height="20" />
+            <polygon points="60 20 60 25 55 25 55 35 50 35 50 25 40 25 40 35 35 35 35 5 40 5 40 20 60 20" />
+            <rect x="50" y="70" width="5" height="5" />
+            <rect x="45" y="45" width="5" height="20" />
+            <rect x="35" y="45" width="5" height="20" />
+            <rect x="25" width="10" height="5" />
+            <polygon points="50 75 50 80 25 80 25 70 30 70 30 75 50 75" />
+            <rect x="20" y="65" width="5" height="5" />
+            <rect x="15" y="60" width="5" height="5" />
+            <polygon points="25 5 25 45 20 45 20 40 15 40 15 35 20 35 20 5 25 5" />
+            <rect x="10" y="50" width="5" height="10" />
+            <rect x="5" y="45" width="5" height="5" />
+            <rect x="5" y="30" width="10" height="5" />
+            <rect y="35" width="5" height="10" />
+        </svg>
+        <img src="assets/imgs/fire.gif" id="spaceship" class="displayNone">
+
+        <span id="cursorText"></span>
+    </div>
+
+
+    <div id="gameContainer">
+        <div id="gameBackground"></div>
+        <div id="gameInfo">
+            <div id="record">
+                Record: <label class="minutes">00</label>:<label class="seconds">00</label>
+            </div>
+            <div id="timer">
+                Timer: <label class="minutes">00</label>:<label class="seconds">00</label>
+            </div>
+            <div id="startGame" class="active" onclick="playGame()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="playButton">
+                    <path
+                        d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stopButton">
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                        <path d="M6 5h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>
+                    </svg>
+                <span class="stats">Play</span>
+            </div>
+        </div>
+        <canvas id="game"></canvas>
+    </div>
+
+    <div class="hover">
+        <div class="noise"></div>
+    </div>
+
+    <div id="navigation" class="home">
+    </div>
+
+    <div id="loading"><span>Loading</span><span>0/100</span></div>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/load.js"></script>
+<script src="js/pageTransition.js"></script>
+<script src="js/game.js"></script>
+
+</html>
