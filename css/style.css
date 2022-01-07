@@ -63,8 +63,27 @@ iframe {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     border: none;
+}
+
+/* ---------------- SCROLL ---------------- */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #454545;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #363636;
 }
 
 /* ---------------- CONTENT ---------------- */
@@ -182,8 +201,9 @@ main h1 {
 
 div.cover {
     height: 0;
-  padding-bottom: 56.25%; /* 16:9 */
-  position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    position: relative;
 }
 
 div.cover::before {
